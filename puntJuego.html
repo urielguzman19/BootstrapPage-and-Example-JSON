@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+ <meta charset="utf-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" href="css/bootstrap.css" media="all" />
+    <!--Integra las clases de los div HTML con los estilos que ofrece Bootstrap por defecto-->
+    <link rel="stylesheet" href="css/bootstrap-responsive.css" media="all" />
+    <link rel="stylesheet" href="css/mystyle.css" media="all" />
+    <!--Cargamos la libreria JQuery-->
+    <script type="text/javascript"  src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+   
+</head>   
+
+</script>
+<body>
+<div class="container" id="general">
+  <div id="encabezado" class="row"> 
+     <div class="span4" id="logo"><img src="img/rottr.jpg" alt="Uno de los mejores juegos"
+       height="70" width="150"></div>  
+     <div id="menu" class="span8">
+        <ul class="nav nav-pills">
+         <li class=""><a style="background:#CEECF5" href="acercaJuego.html">Acerca del Juego</a></li>
+         <li class=""><a style="background:#CEECF5" href="descripcionJuego.html">Descripción del Juego</a></li>       
+         <li class=""><a style="background:#CEECF5" href="calJuego.html">Calificación y crítica del Juego</a></li>
+         <li class="active" ><a href="dlcs.html" style="background:#CEECF5">Contenidos descargables</a></li> 
+        </ul>
+    </div>
+  </div>
+
+<div id="cuerpo" class="row"> 
+   <div id="izquierda" class="span4">
+     <h3>Cultura Gamer</h3>
+      <ul class="nav nav-tabs nav-stacked">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="galeria.html">Galería del Juego</a></li>
+      </ul>
+      <ul class="nav nav-list"><br/>
+          <li class="nav-header">Menú vertical</li></br>
+          <li class="active"><a href="acercaJuego">Acerca del Juego</a></li> 
+          <li><a href="descripcionJuego.html">Descripción del Juego</a></li>
+          <li><a href="calJuego.html">Calificación y crítica del Juego</a></li>
+          <li><a href="dlcs.html">Contenidos descargables</a></li>
+      </ul>
+   </div>
+
+   <div id="derecha" class="span7">
+         <h3>Puntuaciones obtenidas del juego</h3> <section>
+            <table class="table table-bordered" id="tablaJSON">
+                <thead>
+                   <th>Nick del Jugador</th>
+                   <th>Consola de Juego</th>
+                   <th>Calificación recibida</th>
+                   <tbody></tbody>
+                </thead>
+           </table>
+       <!--Funcion jQuery que muestra datos extraidos de la BD MySQL en la tabla #tablaJSON
+         definida en HTML mediante un objeto JSON-->
+       <script type="text/javascript">
+           $(document).ready(function(){
+               var url = "generarJSON.php";
+               $("#tablaJSON tbody").html("");
+               /*Llama el objeto JSON creado en el script PHP, como parámetro recibe el nombre
+               de la tabla en la BD MySQL donde están los datos*/
+               $.getJSON(url,function(calificaciones){
+                   $.each(calificaciones,function(i,cals){
+                       var newRow = 
+                       "<tr>"
+                       +"<td>"+cals.nick+"</td>"
+                       +"<td>"+cals.consola+"</td>"
+                       +"<td>"+cals.calificacion+"</td>"
+                       +"</tr>";
+                       /*Adjunta cada fila a la tabla y se muestra*/
+                       $(newRow).appendTo("#tablaJSON tbody");
+                   });
+                   
+               });
+           });
+       
+       
+       </script>        
+       
+      </section> 
+           
+   </div> 
+</div>
+   <div id="" class="row"> 
+     <div id="footer" class="span12">
+         <span>Rise of the Tomb Raider</span><br/><b>Todos los derechos reservados 2015-2016</b>
+     </div> 
+    </div>
+</div>
+
+<script src="js/bootstrap.js"></script>   
+
+
+</body>
+</html>

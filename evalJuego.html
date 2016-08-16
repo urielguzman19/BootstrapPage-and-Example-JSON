@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+ <meta charset="utf-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" href="css/bootstrap.css" media="all" />
+    <!--Integra las clases de los div HTML con los estilos que ofrece Bootstrap en su version
+    2.3.2 por defecto-->
+    <link rel="stylesheet" href="css/bootstrap-responsive.css" media="all" />
+    <link rel="stylesheet" href="css/mystyle.css" media="all" />
+    
+</head>
+   
+
+<body>
+<div class="container" id="general">
+  <div id="encabezado" class="row"> 
+     <div class="span4" id="logo"><img src="img/rottr.jpg" alt="Uno de los mejores juegos"
+       height="70" width="150"></div>  
+     <div id="menu" class="span8">
+        <ul class="nav nav-pills">
+           <li class="active" style="width:150px height:10px"><a href="acercaJuego.html">Acerca del Juego</a></li>
+           <li class=""><a style="background:#CEECF5" class="" href="descripcionJuego.html">Descripción del Juego</a>           
+           </li>
+          <li class=""><a style="background:#CEECF5" href="calJuego.html">Calificación y crítica del Juego</a></li>
+          <li class="" ><a href="dlcs.html" style="background:#CEECF5">Contenidos descargables</a></li> 
+        </ul>
+    </div>
+  </div>
+
+<div id="cuerpo" class="row"> 
+   <div id="izquierda" class="span4">
+     <h3>Cultura Gamer</h3>
+      <ul class="nav nav-tabs nav-stacked">
+        <li class="active">
+        <a href="index.html">Inicio</a></li>
+        <li><a href="galeria.html">Galería del Juego</a></li>
+      </ul>
+      <ul class="nav nav-list"><br/>
+          <li class="nav-header">Menú vertical</li></br>
+          <li class="active"><a href="acercaJuego.html">Acerca del Juego</a></li> 
+          <li><a href="descripcionJuego.html">Descripción del Juego</a></li>
+          <li><a href="calJuego.html">Calificación y crítica del Juego</a></li>
+          <li><a href="dlcs.html">Contenidos descargables</a></li>
+      </ul>
+   </div>
+
+   <div id="derecha" class="span7">
+       <h4>Puntuación del juego-Ingresar datos</h4>
+        <!--Definimos la estructura del formulario-->
+        <!--class container que es la que Bootstrap agrega por defecto para hacer el formulario responsive
+           id container para estilizar un poco el formulario de forma personal-->
+         <div  id ="container" class="container">
+         </br>     
+          <form method="POST" action="registro.php" name="formularioEval">
+            <p>Nick de Jugador: <input type ="text" name="nick" maxlength="30" placeholder="Nick de Jugador"></p>
+            <p>Consola de juego: <select name="consola" type="text">
+            <option></option>    
+            <option>Xbox One</option>
+            <option>Xbox 360</option>
+            <option>PC Windows</option>    
+            </select></p> 
+            <p>Calificación de juego <select name="calificacion" type="number">
+            <option></option>    
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>    
+            </select></p>  
+            <input class ="btn btn-primary" type="reset" value="Borrar">
+            <input class ="btn btn-primary" type="submit" name="Registrar" value="Enviar datos">
+          </form></br>
+          <p><a class="btn btn-primary btn-large" href="puntJuego.html">Ver puntuaciones del juego</a></p>  
+         </div>  
+     </div>     
+</div>
+   <div id="" class="row"> 
+     <div id="footer" class="span12">
+         <span>Rise of the Tomb Raider</span><br/><b>Todos los derechos reservados 2015-2016</b>
+     </div> 
+    </div>
+</div>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="js/bootstrap.js"></script>   
+
+</body>
+</html>

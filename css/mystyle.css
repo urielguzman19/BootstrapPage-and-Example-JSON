@@ -1,0 +1,102 @@
+
+@charset "UTF-8";
+/* CSS Document */
+body{
+font-family: verdana, arial;
+background-color: #E4E4E4;
+}
+#general{
+ 
+margin-top:20px;
+background-color: #FFF;
+border-radius:10px;
+padding: 5px;
+}
+#encabezado{
+ 
+height: 90px; 
+padding: 5px;
+
+}
+#logo{
+color:#FF4000;
+text-shadow: 0.1em 0.1em 0.05em #333;
+height: 82px; 
+padding: 10px;
+
+ 
+}
+#menu{
+margin-top:22px;
+float:right;
+}
+ 
+#izquierda{
+color:#515151;
+min-height: 300px;
+background: #fff url(../img/bghead.PNG) repeat-x;
+border-radius:5px;
+border: 2px solid #848484;
+ 
+}
+#izquierda h3{
+ 
+text-align: center;
+color:#515151;
+}
+#derecha h3{
+text-align: center;
+color:##515151;
+}
+#derecha{
+color:#000;
+min-height: 300px;
+background: #fff url(../img/bghead.PNG) repeat-x;
+border-radius:5px;
+border: 1px solid #848484;
+padding: 10px
+}
+#derecha p{
+	font-size: 15px;
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	text-align: justify;
+}
+#footer{
+background: #0489B1;
+height: 50px;
+text-align: center;
+margin-top: 10px;
+color:#fff;
+}
+
+/*Estilos de tabla*/
+#tabla {
+    margin: 15px 5px 15px 15px; 
+    border: solid 2px black; 
+    border-collapse:collapse; 
+}
+#tabla td { 
+    padding: 2px; 
+    border: solid 1px black; 
+    text-align:center;
+    font-family: "Geneva",verdana,sans-serif;
+    font-size: 15px;
+}
+#tabla tr { 
+    padding: 4px 2px;
+	border-left: solid 1px #525252; 
+    font-size: 1 em; 
+    text-align:center;
+    font-style: italic;
+}
+tr:nth-child(odd)		{ background-color:#CCC; }
+tr:nth-child(even)		{ background-color:#FFF; }
+
+/*Pequeños arreglos para el estilo del formulario*/
+#container{
+    background: #DEDEDE;
+    border-radius: 5px;
+    border: 3px solid #CDCDCD;
+    margin-top: 0px;
+}
+
